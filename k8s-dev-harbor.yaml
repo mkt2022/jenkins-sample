@@ -13,6 +13,8 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+      imagePullSecrets:
+      - name: harborsecret
       containers:
       - image: 192.168.106.181/jenkins-demo/jenkins-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
@@ -34,5 +36,3 @@ spec:
    - port: 18888
      targetPort: 18888
      nodePort: 31889
-   imagePullSecrets:
-   - name: harborsecret
