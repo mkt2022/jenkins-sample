@@ -34,3 +34,5 @@ spec:
    - port: 18888
      targetPort: 18888
      nodePort: 31889
+   imagePullSecrets:
+   - name: harborsecret
